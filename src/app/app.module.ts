@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import {MegaMenuModule,MessagesModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
+import { MsgMessageComponent } from './msg-message/msg-message.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MsgMessageComponent
   ],
   imports: [
     BrowserModule,
