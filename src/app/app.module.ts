@@ -6,6 +6,7 @@ import {MegaMenuModule,MessagesModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MsgMessageComponent } from './msg-message/msg-message.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,18 @@ import { MsgMessageComponent } from './msg-message/msg-message.component';
     FormsModule,
     HttpModule,
     MegaMenuModule,
-    MessagesModule
+    MessagesModule,
+    RouterModule.forRoot([
+      {
+        path:'msg/message',
+        component:MsgMessageComponent
+      },
+      {
+        path:'',
+        redirectTo:'/msg/message',
+        pathMatch:'full'
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

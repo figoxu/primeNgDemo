@@ -9,7 +9,4 @@ require('primeng/resources/primeng.min.css')
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-
-
 }
