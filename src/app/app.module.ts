@@ -2,20 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {MegaMenuModule,MessagesModule,GrowlModule,MenubarModule} from 'primeng/primeng';
+import {MegaMenuModule, MessagesModule, GrowlModule, MenubarModule, AutoCompleteModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { MsgMessageComponent } from './msg-message/msg-message.component';
 import {RouterModule} from "@angular/router";
 import { MsgGrowlComponent } from './msg-growl/msg-growl.component';
 import { MenuNavComponent } from './menu-nav/menu-nav.component';
+import { InputAutoCompleteComponent } from './input-auto-complete/input-auto-complete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MsgMessageComponent,
     MsgGrowlComponent,
-    MenuNavComponent
+    MenuNavComponent,
+    InputAutoCompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { MenuNavComponent } from './menu-nav/menu-nav.component';
     MessagesModule,
     GrowlModule,
     MenubarModule,
+    AutoCompleteModule,
     RouterModule.forRoot([
       {
         path:'msg/message',
@@ -37,6 +40,10 @@ import { MenuNavComponent } from './menu-nav/menu-nav.component';
       {
         path:'menu/nav',
         component:MenuNavComponent
+      },
+      {
+        path:'input/autocomplete',
+        component:InputAutoCompleteComponent
       },
       {
         path:'',
